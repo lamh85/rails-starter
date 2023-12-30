@@ -1,10 +1,16 @@
-Start new app
+# Starting a new app
 
 ```sh
-rails new myapp --database=postgresql
+rails new myapp --database=postgresql --minimal --skip-javascript
 ```
 
-Set up CORS
+Options: https://gist.github.com/kirillshevch/1b52f711e66b064416d746f07e834c00
+
+About `--minimal`: https://www.bigbinary.com/blog/rails-6-1-adds-minimal-option-support
+
+# Configuration
+
+## CORS
 
 ```ruby
 gem 'rack-cors'
@@ -20,14 +26,22 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 end
 ```
 
-Migration
-* How to generate specific migration syntax by using `generate migration` and file name convention: https://guides.rubyonrails.org/active_record_migrations.html#adding-new-columns
-  * ```sh
-    # Examples:
+## Other
 
-    bin/rails generate migration AddPartNumberToProducts part_number:string
+Database name in `database.yml`.
 
-Other useful gems
+# Migration
+
+How to generate specific migration syntax by using `generate migration` and file name convention: https://guides.rubyonrails.org/active_record_migrations.html#adding-new-columns
+
+```sh
+# Examples:
+
+bin/rails generate migration AddPartNumberToProducts part_number:string
+````
+
+# Useful Gems
+
 ```ruby
 gem 'dotenv-rails'
 ```
