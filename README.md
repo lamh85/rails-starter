@@ -1,3 +1,9 @@
+# Purpose
+
+Recently I've been starting many new Rails apps. I tend to forget to configure the same thing like CORS. This is a guide to help me remember.
+
+Stretch goal: Write a Bash script to automate this.
+
 # Starting a new app
 
 ```sh
